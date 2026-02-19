@@ -1,9 +1,7 @@
-const moment = require('moment');
-
 const dateHelpers = {
-  MY: date => moment(date.toString(), ['YYYY-MM-DD']).format('MMM YYYY'),
-  Y: date => moment(date.toString(), ['YYYY-MM-DD']).format('YYYY'),
-  DMY: date => moment(date.toString(), ['YYYY-MM-DD']).format('D MMM YYYY')
+  MY: date => new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' }).format(new Date(date)),
+  Y: date => new Intl.DateTimeFormat('en-US', { year: 'numeric' }).format(new Date(date)),
+  DMY: date => new Intl.DateTimeFormat('en-US', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(date))
 };
 
 module.exports = { dateHelpers };

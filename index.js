@@ -9,6 +9,7 @@ const { dateHelpers } = require(join(HELPERS, 'date-helpers.js'));
 const { paragraphSplit } = require(join(HELPERS, 'paragraph-split.js'));
 const { toLowerCase } = require(join(HELPERS, 'to-lower-case.js'));
 const { spaceToDash } = require(join(HELPERS, 'space-to-dash.js'));
+const { phoneFormat } = require(join(HELPERS, 'phone-format.js'));
 
 const { MY, Y, DMY } = dateHelpers;
 
@@ -19,6 +20,7 @@ Handlebars.registerHelper('DMY', DMY);
 Handlebars.registerHelper('paragraphSplit', paragraphSplit);
 Handlebars.registerHelper('toLowerCase', toLowerCase);
 Handlebars.registerHelper('spaceToDash', spaceToDash);
+Handlebars.registerHelper('phoneFormat', phoneFormat);
 
 function render(resume) {
   const css = readFileSync(`${__dirname}/style.css`, 'utf-8');
