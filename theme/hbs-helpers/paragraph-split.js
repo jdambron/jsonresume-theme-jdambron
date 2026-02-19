@@ -2,12 +2,10 @@ const { SafeString } = require('handlebars');
 const markdown = require('markdown-it')();
 
 const paragraphSplit = (text) => {
-  if (text != null) {
-    const paragraphs = text.split(/\r\n|\r|\n/g);
-    const renderedParagraphs = paragraphs.map(p => markdown.render(p.trim())).join('');
-    return new SafeString(renderedParagraphs);
+  if (text == null) {
+    return '';
   }
-  return new SafeString('');
+  return new SafeString(markdown.render(text));
 };
 
 module.exports = { paragraphSplit };

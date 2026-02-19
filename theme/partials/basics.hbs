@@ -52,7 +52,7 @@
 			{{#if phone}}
 			<div class="phone">
 				<span class="fa-solid fa-mobile-screen-button"></span>
-				<a class="hide-href-print" href="tel:{{phone}}">{{phoneFormat phone}}</a>
+				<a class="hide-href-print" href="tel:{{phone}}">{{formatPhone phone}}</a>
 			</div>
 			{{/if}}
 		</div>
@@ -82,7 +82,7 @@
 	{{#if summary}}
 	<section class="section summary">
     <header>
-      <h2 class="section-title">summary</h2>
+      <h2 class="section-title">Summary</h2>
     </header>
 		<section class="main-summary">
 			<div>{{paragraphSplit summary}}</div>
