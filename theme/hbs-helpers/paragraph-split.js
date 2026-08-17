@@ -1,5 +1,5 @@
 const { SafeString } = require('handlebars');
-const markdown = require('markdown-it')();
+const markdown = require('markdown-it')({ html: false, linkify: true });
 
 const paragraphSplit = (text) => {
   if (text == null) {

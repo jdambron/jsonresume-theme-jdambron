@@ -1,4 +1,4 @@
-// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`SimpleTests If current rendered HTML has changed from previous taken snapshot 1`] = `
 "<!doctype html>
@@ -197,6 +197,11 @@ a {
 a:hover {
   color: #0c65a5;
   text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
 }
 
 li {
@@ -857,6 +862,10 @@ section .location {
       
       
       		<div id="contact">
+      			<div class="website">
+      				<span class="fa-solid fa-up-right-from-square"></span>
+      				<a class="hide-href-print" target="_blank" href="http://richardhendricks.example.com">http://richardhendricks.example.com</a>
+      			</div>
       			<div class="email">
       				<span class="fa-regular fa-envelope"></span>
       				<a class="hide-href-print" href="mailto:richard.hendriks@mail.com">richard.hendriks@mail.com</a>
@@ -867,7 +876,7 @@ section .location {
       			</div>
       		</div>
       
-      		<div id="profiles">
+      		<nav id="profiles" aria-label="Social profiles">
       			<div class="item">
       				<div class="username">
       					<span class="fa-brands fa-twitter twitter social"></span>
@@ -884,7 +893,7 @@ section .location {
       					</span>
       				</div>
       			</div>
-      		</div>
+      		</nav>
       	</header>
       
       	<section class="section summary">
@@ -967,7 +976,9 @@ section .location {
                   <header>
                     <div class="header-left">
                       <div class="position">CEO/President</div>
-                        <div class="company">Pied Piper</div>
+                        <span class="company">
+                          <a target="_blank" href="http://piedpiper.example.com">Pied Piper</a>
+                        </span>
                     </div>
                       <div class="date">
                         <span class="startDate">Dec 2013</span>
@@ -978,10 +989,7 @@ section .location {
                   <span class="fa-solid fa-location-dot"></span>
                   Palo Alto, CA
                 </span>
-                <span class="url">
-                  <span class="fa-solid fa-up-right-from-square"></span>
-                  <a target="_blank" href="http://piedpiper.example.com">http://piedpiper.example.com</a>
-                </span>        <div class="item" id="work-item">
+                <div class="item">
                   <div class="summary"><p>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
           </div>
                   <ul class="highlights">
@@ -1050,7 +1058,7 @@ section .location {
                       Teacher
                     </div>
                     <div class="organization">
-                      CoderDojo
+                      <a target="_blank" href="http://coderdojo.example.com/">CoderDojo</a>
                     </div>
                   </div>
                  
@@ -1086,7 +1094,7 @@ section .location {
                       Information Technology
                     </div>
                     <div class="institution">
-                      University of Oklahoma
+                      <a target="_blank" href="https://www.ou.edu/">University of Oklahoma</a>
                     </div>
                   </div>
                 </header>
@@ -1143,7 +1151,10 @@ section .location {
                   </span>
                   <div class="header-left">
                     <span class="name">
-                      Video compression for 3d media
+                      <span class="website">
+                        <span class="fa-solid fa-up-right-from-square"></span>
+                        <a target="_blank" href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)">Video compression for 3d media</a>
+                      </span>
                     </span>
                     <span class="publisher">
                       in Hooli

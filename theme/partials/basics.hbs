@@ -37,7 +37,12 @@
 		{{/birthDate}}
 
 		<div id="contact">
-			{{#if website}}
+			{{#if url}}
+			<div class="website">
+				<span class="fa-solid fa-up-right-from-square"></span>
+				<a class="hide-href-print" target="_blank" href="{{url}}">{{url}}</a>
+			</div>
+			{{else if website}}
 			<div class="website">
 				<span class="fa-solid fa-up-right-from-square"></span>
 				<a class="hide-href-print" target="_blank" href="{{website}}">{{website}}</a>
@@ -58,7 +63,7 @@
 		</div>
 
 		{{#if profiles.length}}
-		<div id="profiles">
+		<nav id="profiles" aria-label="Social profiles">
 			{{#each profiles}}
 			<div class="item">
 				{{#if network}}
@@ -75,7 +80,7 @@
 				{{/if}}
 			</div>
 			{{/each}}
-		</div>
+		</nav>
 		{{/if}}
 	</header>
 
