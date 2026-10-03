@@ -22,8 +22,10 @@ The theme exports:
 On top of the [JSON Resume schema](https://jsonresume.org/schema/), this theme supports:
 
 - `basics.birth` — `{ place, state, date }`, rendered as "Born in …" in the header.
+- `basics.degree` — free-form text rendered under the label in the header (e.g. "Master of Science in Engineering").
 - `skills[].levelDisplay` — free-form text shown instead of the numeric/standard `level`.
 - `languages[].fluencyDisplay` — free-form text shown instead of the standard `fluency` value.
+- `education[].gpa` — rendered as "Grade: …" under the education entry.
 
 ## Notes
 
